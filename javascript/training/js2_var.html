@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>ECMAScript 6</title>
+  <script>
+    (function() {
+      //
+      var a = 'sampleJS';
+      b = 10;
+      console.log( a );
+      console.log( window.a == a);
+      console.log( window.b == b);
+      
+      function test(){
+        var aa = 'sampleJS';
+        //console.log( aa ); //sampleJs
+        //console.log( window.aa == aa); //false
+      }
+      test()
+      console.log( aa ); //reference error
+      console.log( window.aa == aa); //ref error
+      
+      function test1(){
+        b = 10;
+      }
+      test1()
+      console.log(b) //10
+      console.log(b == window.b) //true
+      
+      //http://stackoverflow.com/questions/1470488/what-is-the-function-of-the-var-keyword-and-when-to-use-it-or-omit-it
+      var x=10;           //initialize and assigns 10 to y (global scope)    
+      function fun(){    
+      var x=20;           //initialize and assigns 10 to x (local scope)    
+      console.log(x);     //prints 20    
+      }
+      fun();              //Executing function fun()
+
+      console.log(x);     //prints 10
+      
+      y=10;               //initialize and assigns 10 to y (global scope)
+      function fun(){
+      y=20;               //assign 20 to y (global scope)
+      console.log(y);     //prints 20
+      }
+      fun();              //Executing function fun()
+
+      console.log(y);     //prints 20
+
+      z=10;               //initialize and assigns 10 to z (global scope)
+      function fun(){
+      var z=20;           //intialize and assigns 20 to z (local scope)
+      console.log(z);     //prints 20
+      }
+
+      fun();              //Executing function fun()
+
+      console.log(z);     //prints 10
+    })();
+  </script>
+</head>
+
+<body>
+  check the console
+</body>

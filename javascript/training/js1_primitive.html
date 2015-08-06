@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title>ECMAScript 6</title>
+  <script>
+    (function() {
+      var a = ''; 
+      console.log(typeof a); // string 
+      console.log(a == null); //false 
+      console.log(a == undefined); // false
+      
+      //
+      var a;
+      console.log(a == null); //true
+      console.log(a == undefined); //true 
+      
+      //
+      var a; 
+      console.log(a === null); //false 
+      console.log(a === undefined); // true
+      
+      console.log( typeof NaN); //Number
+      
+      //
+      console.log(typeof null); // "object"
+      console.log(typeof undefined); // "undefined"
+      console.log(typeof 0); // "number" (`typeof NaN` is also "number")
+      console.log(typeof true); // "boolean"
+      console.log(typeof "foo"); // "string"
+      console.log(typeof {}); // "object"
+      console.log(typeof function () {}); // "function"
+      console.log(typeof []); // "object"
+    })();
+  </script>
+</head>
+
+<body>
+  check the console
+</body>
